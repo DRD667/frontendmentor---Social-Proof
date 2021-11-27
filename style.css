@@ -15,6 +15,11 @@ body {
   font-size: 15px;
   font-family: "Spartan", sans-serif;
   text-align: center;
+  overflow: hidden;
+}
+
+#wrapper {
+  margin: 5em 0;
 }
 
 .container {
@@ -24,19 +29,19 @@ body {
 
 h1 {
   color: var(--primary-color);
-  margin-top: 4rem;
   font-size: 3em;
 }
 
 .title + p {
   margin: 1em 0;
   color: var(--secondary-color);
+  line-height: 1.5;
 }
 
 /* ratings */
 .rating__card {
   background-color: var(--soft-color);
-  padding: 1rem 0;
+  padding: 1rem;
   border-radius: 8px;
   margin: 2rem 0;
   color: var(--primary-color);
@@ -54,7 +59,7 @@ h1 {
   color: var(--primary-text);
   text-align: left;
   padding: 2rem;
-  border-radius: 15px 15px 10px 10px;
+  border-radius: 10px 10px 5px 5px;
 }
 
 .review__card .profile {
@@ -86,6 +91,55 @@ h1 {
 .review__card p {
   line-height: 1.7;
   color: var(--soft-color);
+}
+
+@media (min-width: 900px) {
+  .container {
+    width: 85%;
+  }
+  .top {
+    display: flex;
+  }
+
+  .top > * {
+    flex: 1;
+  }
+
+  header {
+    padding-right: 10em;
+    text-align: left;
+  }
+
+  .rating__card {
+    position: relative;
+    display: flex;
+    column-gap: 2rem;
+    margin: 1rem 0;
+  }
+  .review__card {
+    position: relative;
+  }
+
+  .rating__card:nth-child(1) {
+    left: -2rem;
+  }
+
+  .rating__card:nth-child(3) {
+    left: 2rem;
+  }
+
+  #review {
+    display: flex;
+    gap: 3rem;
+  }
+
+  .review__card:nth-child(1) {
+    top: -1rem;
+  }
+
+  .review__card:nth-child(3) {
+    bottom: -1rem;
+  }
 }
 /* 
 Very Dark Magentavar(var(--primary-color)
