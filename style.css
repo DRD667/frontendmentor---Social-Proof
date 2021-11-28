@@ -15,7 +15,6 @@ body {
   font-size: 15px;
   font-family: "Spartan", sans-serif;
   text-align: center;
-  overflow: hidden;
   background-image: url(images/bg-pattern-bottom-desktop.svg),
     url(images/bg-pattern-top-desktop.svg);
   background-size: 100%;
@@ -98,6 +97,9 @@ h1 {
 }
 
 @media (min-width: 900px) {
+  body {
+    overflow: hidden;
+  }
   .container {
     width: 85%;
   }
